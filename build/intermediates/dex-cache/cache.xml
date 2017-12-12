@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\AkbarH\.android\build-cache\319894f8022579773df85d9933fa164b21c0cd96\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="14bfdbf5594d4d7c320de20831849050788ab1e3">
+        <dex dex="C:\Users\AkbarH\AndroidStudioProjects\Moprog\Tubes\TetanggaKu\app\build\intermediates\pre-dexed\debug\classes_b0bc73c64785830a24b7267929051b74c57a260f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AkbarH\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\27.0.2\b9ef4342c934a1a8b107506273dc8061662a322\support-annotations-27.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0b9ef4342c934a1a8b107506273dc8061662a322">
+        <dex dex="C:\Users\AkbarH\AndroidStudioProjects\Moprog\Tubes\TetanggaKu\app\build\intermediates\pre-dexed\debug\support-annotations-27.0.2_4570ac135dc9af93c165301ad07c5fbfa2971cb1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\AkbarH\.android\build-cache\2606d22663190883bd69eae5a862cd9059b380ce\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="C:\Users\AkbarH\AndroidStudioProjects\Moprog\Tubes\TetanggaKu\app\build\intermediates\pre-dexed\debug\classes_36e1366bd7980652a8227b557c220b162e0653ab.jar" />
+    </item>
+
+</items>

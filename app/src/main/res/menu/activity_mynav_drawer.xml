@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_urus_izin"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Urus Izin" />
+        <item
+            android:id="@+id/nav_forum_warga"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Forum Warga" />
+        <item
+            android:id="@+id/nav_event_warga"
+            android:icon="@drawable/ic_event"
+            android:title="Event Warga" />
+        <item
+            android:id="@+id/nav_lokasi_penting"
+            android:icon="@drawable/ic_location"
+            android:title="Lokasi Penting" />
+        <item
+            android:id="@+id/nav_pengaturan"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Pengaturan" />
+        <item
+            android:id="@+id/nav_tetangga"
+            android:icon="@drawable/ic_tetangga"
+            android:title="Tetangga Sekitar" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/ic_exit_to_app_black_24dp"
+                    android:title="Logout" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

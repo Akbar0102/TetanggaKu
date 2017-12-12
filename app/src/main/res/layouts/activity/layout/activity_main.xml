@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.example.android.tetanggaku.MainActivity">
+
+    <ImageView
+        android:layout_marginTop="108dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/icon"
+        android:layout_width="219dp"
+        android:layout_height="50dp" />
+    
+    <EditText
+        android:id="@+id/et_username"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="40dp"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffff"
+        android:hint="Email"
+        android:layout_marginTop="263dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/username"
+        android:layout_width="275dp"
+        android:layout_height="45dp" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:inputType="textPassword"
+        android:paddingLeft="40dp"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffff"
+        android:hint="Password"
+        android:layout_marginTop="328dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/password"
+        android:layout_width="275dp"
+        android:layout_height="45dp" />
+    
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_marginTop="418dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:background="#1866EC"
+        android:text="Log In"
+        android:layout_width="275dp"
+        android:layout_height="45dp" />
+
+    <TextView
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_create"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="50dp"
+        android:text="Create a New Account"
+        android:background="?attr/selectableItemBackground"/>
+
+</RelativeLayout>

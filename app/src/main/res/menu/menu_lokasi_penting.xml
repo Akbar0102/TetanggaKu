@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mn_lok_tet"
+        android:orderInCategory="100"
+        android:title="Lokasi Tetangga" />
+    <item
+        android:id="@+id/mn_grosir"
+        android:orderInCategory="101"
+        android:title="Grosir dan UMKM" />
+    <item
+        android:id="@+id/mn_wil_adm"
+        android:orderInCategory="102"
+        android:title="Wil. Administrasi" />
+    <item
+        android:id="@+id/mn_enter"
+        android:orderInCategory="103"
+        android:title="Entertainment" />
+</menu>

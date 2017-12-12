@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "452588832687",
+    "firebase_url": "https://tetanggaku-8997c.firebaseio.com",
+    "project_id": "tetanggaku-8997c",
+    "storage_bucket": "tetanggaku-8997c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452588832687:android:bf19150734a20c51",
+        "android_client_info": {
+          "package_name": "com.example.android.tetanggaku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452588832687-1h0ibm4eo05ecqrf8rs00bail73q5cik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQzJI5es-c4pWpcY5umQEp5PAJ9uqe69o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

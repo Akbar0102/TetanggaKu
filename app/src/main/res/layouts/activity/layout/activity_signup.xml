@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
+    tools:context="com.example.android.tetanggaku.SignupActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgV"
+                android:layout_width="219dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/icon" />
+
+            <EditText
+                android:id="@+id/et_nama"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/imgV"
+                android:background="@drawable/namalengkap"
+                android:hint="Nama Lengkap"
+                android:inputType="text"
+                android:paddingLeft="40dp"
+                android:textColor="#ffff"
+                android:textColorHint="#ffff" />
+
+            <EditText
+                android:id="@+id/et_jenis_kelamin"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/et_nama"
+                android:background="@drawable/namalengkap"
+                android:hint="Jenis Kelamin"
+                android:inputType="text"
+                android:paddingLeft="40dp"
+                android:textColor="#ffff"
+                android:textColorHint="#ffff" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_jenis_kelamin"
+                android:background="@drawable/nik"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="45dp"
+                android:textColor="#ffff"
+                android:textColorHint="#ffff" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_email"
+                android:background="@drawable/nik"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="45dp"
+                android:textColor="#ffff"
+                android:textColorHint="#ffff" />
+
+            <EditText
+                android:id="@+id/et_nik"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_password"
+                android:background="@drawable/nik"
+                android:hint="NIK"
+                android:inputType="number"
+                android:paddingLeft="45dp"
+                android:textColor="#ffff"
+                android:textColorHint="#ffff" />
+
+            <EditText
+                android:id="@+id/et_pekerjaan"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_nik"
+                android:background="@drawable/nik"
+                android:hint="Pekerjaan"
+                android:inputType="text"
+                android:paddingLeft="45dp"
+                android:textColor="#ffff"
+                android:textColorHint="#ffff" />
+
+            <EditText
+                android:id="@+id/et_jenis_perangkat"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_pekerjaan"
+                android:background="@drawable/nik"
+                android:hint="Jenis Perangkat"
+                android:inputType="text"
+                android:paddingLeft="45dp"
+                android:textColor="#ffff"
+                android:textColorHint="#ffff" />
+
+            <EditText
+                android:id="@+id/et_alamat"
+                android:layout_width="275dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_jenis_perangkat"
+                android:background="@drawable/alamat"
+                android:gravity="top"
+                android:hint="Alamat"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:paddingLeft="5dp"
+                android:textColor="#ffff"
+                android:textColorHint="#ffff" />
+
+            <Button
+                android:id="@+id/btn_signup"
+                android:layout_width="275dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/et_alamat"
+                android:background="#1866EC"
+                android:text="Sign Up"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/txt_already"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/btn_signup"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:text="Already Have Account"
+                android:textColor="#ffffff" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
