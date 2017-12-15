@@ -46,8 +46,10 @@
         <activity
             android:name="component.lokasi_penting.LokasiTetangga"
             android:theme="@style/AppThemeDetail" />
-        <activity android:name=".DetailMaps"
-            android:theme="@style/AppThemeDetail"></activity>
+        <activity
+            android:name=".DetailMaps"
+            android:theme="@style/AppThemeDetail" />
+        <activity android:name="component.event_warga.TambahEvent"></activity>
     </application>
 
 </manifest>

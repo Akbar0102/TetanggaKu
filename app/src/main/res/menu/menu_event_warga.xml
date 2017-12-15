@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tambah_event"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="Tamah Event"
+        app:showAsAction="ifRoom" />
+</menu>
