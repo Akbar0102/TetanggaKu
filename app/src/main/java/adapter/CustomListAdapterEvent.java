@@ -35,13 +35,15 @@ public class CustomListAdapterEvent extends ArrayAdapter<Event> {
         View rowView = inflater.inflate(R.layout.custom_list_lihat_event, null, true);
 
         TextView txtEvent = (TextView) rowView.findViewById(R.id.tvEvent);
-        TextView txtDeskripsi = (TextView) rowView.findViewById(R.id.tvDeskripsi);
-
-        Event evt = event.get(position);
+        TextView txtNama = (TextView) rowView.findViewById(R.id.tvNama);
+        TextView txtWaktu = (TextView) rowView.findViewById(R.id.tvWaktu);
+        TextView txtLokasi = (TextView) rowView.findViewById(R.id.tvLokasi);
 
         //set isi textview sama imageview, yang ada di mylist
-        txtEvent.setText(event.get(position).getNama());
-        txtDeskripsi.setText(event.get(position).getDeskripsi());
+        txtEvent.setText(event.get(position).getEvent());
+        txtNama.setText(event.get(position).getNama());
+        txtWaktu.setText(event.get(position).getWaktu());
+        txtLokasi.setText(event.get(position).getLokasi());
 
         return rowView;
     }
