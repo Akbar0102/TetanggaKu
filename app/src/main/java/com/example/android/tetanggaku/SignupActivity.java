@@ -111,7 +111,8 @@ public class SignupActivity extends AppCompatActivity {
                                         userJson.getString("nama"),
                                         userJson.getString("jenis"),
                                         userJson.getString("alamat"),
-                                        userJson.getString("status")
+                                        userJson.getString("status"),
+                                        userJson.getInt("id_warga")
                                 );
                                 SharedPrefManager.getInstance(getApplicationContext()).userLogin(user);
 

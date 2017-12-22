@@ -10,9 +10,10 @@ public class Warga {
     private String alamat, pekerjaan;
     private String status;
     private double latitude, longitude;
+    private int id;
 
 
-    public Warga(String nama, String jenis, String alamat, String status, double latitude, double longitude, String pekerjaan) {
+    public Warga(String nama, String jenis, String alamat, String status, double latitude, double longitude, String pekerjaan, int id) {
         this.nama = nama;
         this.jenis = jenis;
         this.alamat = alamat;
@@ -20,6 +21,15 @@ public class Warga {
         this.latitude = latitude;
         this.longitude = longitude;
         this.pekerjaan = pekerjaan;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNama() {

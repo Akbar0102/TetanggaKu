@@ -177,7 +177,8 @@ public class TetanggaSekitar extends Fragment {
                                         wargaObject.getString("pekerjaan"),
                                         wargaObject.getString("status"),
                                         wargaObject.getDouble("latitude"),
-                                        wargaObject.getDouble("longitude"));
+                                        wargaObject.getDouble("longitude"),
+                                        wargaObject.getInt("id_warga"));
                                 //allWarga.add(warga);
                             }
                         } catch (JSONException e) {

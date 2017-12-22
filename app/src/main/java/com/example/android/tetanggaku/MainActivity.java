@@ -92,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
                                             userJson.getString("nama"),
                                             userJson.getString("jenis_perangkat"),
                                             userJson.getString("alamat"),
-                                            userJson.getString("status")
+                                            userJson.getString("status"),
+                                            userJson.getInt("id_warga")
                                     );
 
                                     //storing the user in shared preferences

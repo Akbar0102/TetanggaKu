@@ -63,8 +63,10 @@ public class MynavActivity extends AppCompatActivity
         View hView =  navigationView.getHeaderView(0);
         TextView nav_user = (TextView)hView.findViewById(R.id.nav_name);
         TextView nav_email = (TextView)hView.findViewById(R.id.nav_email);
+        TextView id_warga = hView.findViewById(R.id.nav_id_warga);
         nav_user.setText(user.getNama());
         nav_email.setText(user.getAlamat());
+        id_warga.setText(""+user.getId());
 
         //set agar tampil default di forum warga
         navigationView.setCheckedItem(R.id.nav_forum_warga);

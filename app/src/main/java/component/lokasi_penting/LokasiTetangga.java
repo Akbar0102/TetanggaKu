@@ -171,6 +171,11 @@ public class LokasiTetangga extends AppCompatActivity implements OnMapReadyCallb
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
     public void onConnectionSuspended(int i) {
 
     }

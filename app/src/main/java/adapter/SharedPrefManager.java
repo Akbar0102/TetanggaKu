@@ -19,6 +19,7 @@ public class SharedPrefManager {
     private static final String KEY_STATUS = "keystatus";
     private static final String KEY_JENIS = "keyjenis";
     private static final String KEY_ALAMAT = "keyalamat";
+    private static final String KEY_ID = "keyid";
 
 
     private static SharedPrefManager mInstance;
@@ -42,6 +43,7 @@ public class SharedPrefManager {
         editor.putString(KEY_JENIS, warga.getJenis());
         editor.putString(KEY_STATUS, warga.getStatus());
         editor.putString(KEY_ALAMAT, warga.getAlamat());
+        editor.putInt(KEY_ID, warga.getId());
         editor.apply();
     }
 
@@ -56,7 +58,8 @@ public class SharedPrefManager {
                 sharedPreferences.getString(KEY_NAMA, null),
                 sharedPreferences.getString(KEY_JENIS, null),
                 sharedPreferences.getString(KEY_ALAMAT, null),
-                sharedPreferences.getString(KEY_STATUS, null)
+                sharedPreferences.getString(KEY_STATUS, null),
+                sharedPreferences.getInt(KEY_ID, 0)
         );
     }
 

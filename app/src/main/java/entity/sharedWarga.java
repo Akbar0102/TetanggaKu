@@ -5,16 +5,27 @@ package entity;
  */
 
 public class sharedWarga {
+    private int id;
     private String nama;
     private String jenis;
     private String alamat;
     private String status;
 
-    public sharedWarga(String nama, String jenis, String alamat, String status) {
+    public sharedWarga(String nama, String jenis, String alamat, String status, int id) {
         this.nama = nama;
         this.jenis = jenis;
         this.alamat = alamat;
         this.status = status;
+        this.id = id;
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNama() {
