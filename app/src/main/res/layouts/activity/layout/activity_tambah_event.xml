@@ -89,34 +89,13 @@
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="117dp" />
 
-            <EditText
-                android:id="@+id/et_tanggal_mulai"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Tanggal Mulai"
-                android:inputType="date" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/tvDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tanggal Selesai :"
-                tools:layout_editor_absoluteX="24dp"
-                tools:layout_editor_absoluteY="134dp" />
+                android:text="Pilih Tanggal"
+                android:textSize="20sp"/>
 
-            <EditText
-                android:id="@+id/et_tanggal_selesai"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Tanggal Selesai"
-                android:inputType="date" />
         </TableRow>
 
         <TableRow

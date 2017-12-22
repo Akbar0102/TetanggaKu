@@ -32,7 +32,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import adapter.CustomListAdapter;
+import adapter.CustomListAdapterTetangga;
 import adapter.VolleySingleton;
 import component.DetailTetangga;
 import database.DbWarga;
@@ -48,7 +48,7 @@ public class TetanggaSekitar extends Fragment {
     private Warga[] warga;
     ArrayList<Warga> allWarga = new ArrayList<Warga>();
     ListView list;
-    CustomListAdapter adapter;
+    CustomListAdapterTetangga adapter;
     public final static String EXTRA_MESSAGE ="edu.upi.cs.yudiwbs.app1.MESSAGE";
     DbWarga db;
     Handler handler = new Handler();
@@ -74,7 +74,7 @@ public class TetanggaSekitar extends Fragment {
 
         //initData();
         allWarga = db.getAllWarga();
-        adapter = new CustomListAdapter(getActivity(),R.layout.my_list, allWarga);
+        adapter = new CustomListAdapterTetangga(getActivity(),R.layout.custom_list_tetangga, allWarga);
         list.setAdapter(adapter);
 
 
@@ -143,7 +143,7 @@ public class TetanggaSekitar extends Fragment {
                 public void run() {
                     progress.dismiss();
                     allWarga = db.getAllWarga();
-                    adapter = new CustomListAdapter(getActivity(),R.layout.my_list, allWarga);
+                    adapter = new CustomListAdapterTetangga(getActivity(),R.layout.custom_list_tetangga, allWarga);
                     list.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                 }

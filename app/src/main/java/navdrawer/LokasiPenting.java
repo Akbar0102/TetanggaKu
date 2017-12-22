@@ -5,11 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.android.tetanggaku.R;
 
@@ -21,19 +19,27 @@ import component.lokasi_penting.LokasiTetangga;
 
 public class LokasiPenting extends Fragment{
     View myView;
-    //Button btnPendidikan;
+    Button btn_lokasi_tetangga;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        setHasOptionsMenu(true);
+        //setHasOptionsMenu(true);
         myView = inflater.inflate(R.layout.layout_lokasi_penting, container, false);
-        //btnPendidikan = myView.findViewById(R.id.btn_pendidikan);
-        //btnPendidikan.setOnClickListener(this);
+
+        btn_lokasi_tetangga = myView.findViewById(R.id.btn_lokasi_tetangga);
+        btn_lokasi_tetangga.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), LokasiTetangga.class);
+                startActivity(i);
+            }
+        });
         return myView;
     }
 
-    @Override
+
+    /*@Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_lokasi_penting, menu);
         super.onCreateOptionsMenu(menu, inflater);
@@ -53,5 +59,5 @@ public class LokasiPenting extends Fragment{
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 }

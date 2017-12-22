@@ -11,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -49,6 +50,13 @@ public class EventWarga extends Fragment {
 
         initData();
         list = (ListView) myView.findViewById(R.id.lv_event_warga);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getContext(),allEvent.get(position).getNama(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return myView;
     }
