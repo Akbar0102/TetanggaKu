@@ -34,7 +34,7 @@ public class MynavActivity extends AppCompatActivity
 
         if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, LoginActivity.class));
         }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

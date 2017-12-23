@@ -72,7 +72,7 @@ public class SignupActivity extends AppCompatActivity {
                     et_email.setError("Harap Isi Email!");
                     et_password.setError("Harap Isi Password!");
                 }else{
-                    Intent i = new Intent(MainActivity.this, MynavActivity.class);
+                    Intent i = new Intent(LoginActivity.this, MynavActivity.class);
                     startActivity(i);
                 }*/
             }
@@ -103,7 +103,7 @@ public class SignupActivity extends AppCompatActivity {
 
                             //jika tanpa error di response
                             if (!obj.getBoolean("error")) {
-                                Toast.makeText(getApplicationContext(), obj.getString("mesage"), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
 
                                 JSONObject userJson = obj.getJSONObject("user");
 

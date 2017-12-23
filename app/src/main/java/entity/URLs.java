@@ -11,4 +11,5 @@ public class URLs {
     public static final String URL_LOGIN = ROOT_URL + "login";
     public static final String URL_GETWARGA = ROOT_URL + "getWarga";
     public static final String URL_GETEVENT = ROOT_URL + "getEvent";
+    public static final String URL_ADDEVENT = ROOT_URL + "addEvent";
 }

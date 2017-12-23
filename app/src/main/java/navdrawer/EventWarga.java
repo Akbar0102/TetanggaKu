@@ -40,13 +40,17 @@ import entity.URLs;
 public class EventWarga extends Fragment {
     View myView;
     ArrayList<Event> allEvent = new ArrayList<Event>();
+    CustomListAdapterEvent adapter;
     ListView list;
+    static final int ACT2_REQUEST = 99;  // request code
+    public final static String EXTRA_MESSAGE ="edu.upi.cs.yudiwbs.app1.MESSAGE";
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         myView = inflater.inflate(R.layout.layout_event_warga, container, false);
+        adapter = new CustomListAdapterEvent(getActivity(), R.layout.custom_list_lihat_event, allEvent);
 
         initData();
         list = (ListView) myView.findViewById(R.id.lv_event_warga);
@@ -78,7 +82,7 @@ public class EventWarga extends Fragment {
                                 Log.d("nama event", ""+event.getEvent());
                                 allEvent.add(event);
                             }
-                            CustomListAdapterEvent adapter = new CustomListAdapterEvent(getActivity(), R.layout.custom_list_lihat_event, allEvent);
+                            adapter = new CustomListAdapterEvent(getActivity(), R.layout.custom_list_lihat_event, allEvent);
                             list.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -101,6 +105,12 @@ public class EventWarga extends Fragment {
     }
 
     @Override
+    public void onResume() {
+        adapter.notifyDataSetChanged();
+        super.onResume();
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -109,11 +119,26 @@ public class EventWarga extends Fragment {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.tambah_event) {
+            adapter.clear();
             Intent i = new Intent(getActivity(), TambahEvent.class);
-            startActivity(i);
+            //startActivity(i);
+            startActivityForResult(i, ACT2_REQUEST);
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // cek request code
+        if (requestCode == ACT2_REQUEST) {
+            String pesan = data.getStringExtra(EXTRA_MESSAGE);
+            //tampilkan toast
+            //Toast toast = Toast.makeText(getContext(), "Pesan:"+pesan, Toast.LENGTH_LONG);
+            //toast.show();
+            initData();
+        }
+    }
+
 
 }

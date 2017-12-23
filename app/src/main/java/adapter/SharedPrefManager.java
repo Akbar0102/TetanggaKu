@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.example.android.tetanggaku.MainActivity;
+import com.example.android.tetanggaku.LoginActivity;
 
 import entity.sharedWarga;
 
@@ -68,6 +68,6 @@ public class SharedPrefManager {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();
-        mCtx.startActivity(new Intent(mCtx, MainActivity.class));
+        mCtx.startActivity(new Intent(mCtx, LoginActivity.class));
     }
 }
