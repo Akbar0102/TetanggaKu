@@ -33,6 +33,8 @@ import component.event_warga.TambahEvent;
 import entity.Event;
 import entity.URLs;
 
+import static android.app.Activity.RESULT_OK;
+
 /**
  * Created by Akbar H on 03/12/2017.
  */
@@ -131,13 +133,13 @@ public class EventWarga extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         // cek request code
-        if (requestCode == ACT2_REQUEST) {
+        if (resultCode == RESULT_OK) {
             String pesan = data.getStringExtra(EXTRA_MESSAGE);
             //tampilkan toast
             //Toast toast = Toast.makeText(getContext(), "Pesan:"+pesan, Toast.LENGTH_LONG);
             //toast.show();
-            initData();
         }
+        initData();
     }
 
 

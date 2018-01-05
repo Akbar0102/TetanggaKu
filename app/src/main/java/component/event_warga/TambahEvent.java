@@ -134,7 +134,7 @@ public class TambahEvent extends AppCompatActivity {
         VolleySingleton.getmInstance(this).addToRequestQueue(stringRequest);
 
         Intent intent2 = getIntent();
-        intent2.putExtra(EventWarga.EXTRA_MESSAGE, "Ini pesan dari acvtivity tambahEvent (DUA)");
+        intent2.putExtra(EventWarga.EXTRA_MESSAGE, "Event berhasil ditambahkan");
         //bungkus string balasan
         setResult(RESULT_OK,intent2);
         //close acvitituy dua

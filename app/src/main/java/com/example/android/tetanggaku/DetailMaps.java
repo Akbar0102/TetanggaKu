@@ -23,8 +23,11 @@ public class DetailMaps extends AppCompatActivity {
         String snippet = bundle.getString("snippet");
         String nama = bundle.getString("nama");
 
-        tvNama.setText(snippet);
-        tvJenis.setText(nama);
+        //pecah string
+        String[] separated = snippet.split("\n");
+
+        tvJenis.setText(separated[0]);
+        tvNama.setText(nama);
     }
 
     @Override

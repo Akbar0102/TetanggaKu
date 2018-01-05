@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
@@ -33,6 +34,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -258,19 +260,19 @@ public class LokasiTetangga extends AppCompatActivity implements OnMapReadyCallb
                         }
                     });
 
-                    /*try {
+                    try {
                         // Customise the styling of the base map using a JSON object defined
                         // in a raw resource file.
                         boolean success = googleMap.setMapStyle(
                                 MapStyleOptions.loadRawResourceStyle(
-                                        this, R.raw.style_json));
+                                        getApplicationContext(), R.raw.style_json));
 
                         if (!success) {
                             Log.e(TAG, "Style parsing failed.");
                         }
                     } catch (Resources.NotFoundException e) {
                         Log.e(TAG, "Can't find style. Error: ", e);
-                    }*/
+                    }
 
                     /*StringRequest stringRequest = new StringRequest(Request.Method.GET, URLs.URL_GETWARGA,
                             new Response.Listener<String>() {
