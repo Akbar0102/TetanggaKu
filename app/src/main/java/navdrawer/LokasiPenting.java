@@ -11,7 +11,10 @@ import android.widget.Button;
 
 import com.example.android.tetanggaku.R;
 
+import component.lokasi_penting.LokasiAdministrasi;
+import component.lokasi_penting.LokasiEntertainment;
 import component.lokasi_penting.LokasiTetangga;
+import component.lokasi_penting.LokasiUsaha;
 
 /**
  * Created by Akbar H on 29/11/2017.
@@ -19,7 +22,7 @@ import component.lokasi_penting.LokasiTetangga;
 
 public class LokasiPenting extends Fragment{
     View myView;
-    Button btn_lokasi_tetangga;
+    Button btn_lokasi_tetangga,btn_wilayah, btn_grosir, btn_enter;
 
     @Nullable
     @Override
@@ -32,6 +35,33 @@ public class LokasiPenting extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), LokasiTetangga.class);
+                startActivity(i);
+            }
+        });
+
+        btn_wilayah = myView.findViewById(R.id.btn_wilayah);
+        btn_wilayah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), LokasiAdministrasi.class);
+                startActivity(i);
+            }
+        });
+
+        btn_grosir = myView.findViewById(R.id.btn_grosir);
+        btn_grosir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), LokasiUsaha.class);
+                startActivity(i);
+            }
+        });
+
+        btn_enter = myView.findViewById(R.id.btn_entertainment);
+        btn_enter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), LokasiEntertainment.class);
                 startActivity(i);
             }
         });

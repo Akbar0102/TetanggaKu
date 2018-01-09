@@ -14,10 +14,10 @@
             android:id="@+id/nav_lokasi_penting"
             android:icon="@drawable/ic_location"
             android:title="Lokasi Penting" />
-        <item
+<!--        <item
             android:id="@+id/nav_pengaturan"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Pengaturan" />
+            android:title="Pengaturan" />-->
         <item
             android:id="@+id/nav_tetangga"
             android:icon="@drawable/ic_tetangga"

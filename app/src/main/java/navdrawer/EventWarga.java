@@ -1,7 +1,10 @@
 package navdrawer;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -29,6 +32,7 @@ import java.util.ArrayList;
 
 import adapter.CustomListAdapterEvent;
 import adapter.VolleySingleton;
+import component.DetailTetangga;
 import component.event_warga.TambahEvent;
 import entity.Event;
 import entity.URLs;
@@ -46,6 +50,8 @@ public class EventWarga extends Fragment {
     ListView list;
     static final int ACT2_REQUEST = 99;  // request code
     public final static String EXTRA_MESSAGE ="edu.upi.cs.yudiwbs.app1.MESSAGE";
+    Handler handler = new Handler();
+    ProgressDialog progress;
 
     @Nullable
     @Override
@@ -60,7 +66,11 @@ public class EventWarga extends Fragment {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(),allEvent.get(position).getNama(),Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getActivity(), DetailTetangga.class);
+                i.putExtra(EXTRA_MESSAGE, allEvent.get(position).getNama());
+                i.putExtra("alamat", allEvent.get(position).getEvent());
+                i.putExtra("job", allEvent.get(position).getDeskripsi());
+                startActivity(i);
             }
         });
 
@@ -125,6 +135,29 @@ public class EventWarga extends Fragment {
             Intent i = new Intent(getActivity(), TambahEvent.class);
             //startActivity(i);
             startActivityForResult(i, ACT2_REQUEST);
+        }else if(id == R.id.refresh_event){
+            adapter.clear();
+            progress=new ProgressDialog(getContext());
+            progress.setMessage("Updating Data...");
+            progress.setCancelable(false);
+            progress.show();
+
+
+
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    progress.dismiss();
+                    AsyncTask.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            try{
+                                initData();
+                            }catch (Exception e){}
+                        }
+
+                    });
+                }
+            }, 5000);   //5 seconds
         }
 
         return super.onOptionsItemSelected(item);

@@ -53,7 +53,10 @@
             android:name="component.event_warga.TambahEvent"
             android:label="Tambah Event"
             android:theme="@style/AppThemeDetail" />
-        <activity android:name="component.forum_warga.KomentarActivity"></activity>
+        <activity android:name="component.forum_warga.KomentarActivity" />
+        <activity android:name="component.lokasi_penting.LokasiAdministrasi" />
+        <activity android:name="component.lokasi_penting.LokasiUsaha" />
+        <activity android:name="component.lokasi_penting.LokasiEntertainment"></activity>
     </application>
 
 </manifest>

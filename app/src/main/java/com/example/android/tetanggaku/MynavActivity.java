@@ -19,7 +19,6 @@ import entity.sharedWarga;
 import navdrawer.EventWarga;
 import navdrawer.ForumWarga;
 import navdrawer.LokasiPenting;
-import navdrawer.Pengaturan;
 import navdrawer.TetanggaSekitar;
 
 
@@ -65,7 +64,7 @@ public class MynavActivity extends AppCompatActivity
         TextView id_warga = hView.findViewById(R.id.nav_id_warga);
         nav_user.setText(user.getNama());
         nav_email.setText(user.getAlamat());
-        id_warga.setText(""+user.getId());
+        id_warga.setText(""+user.getJenis());
 
         //set agar tampil default di forum warga
         navigationView.setCheckedItem(R.id.nav_forum_warga);
@@ -134,10 +133,10 @@ public class MynavActivity extends AppCompatActivity
         } else if (id == R.id.nav_lokasi_penting) {
             setTitle("Lokasi Penting");
             fragmentManager.beginTransaction().replace(R.id.content_frame, new LokasiPenting()).commit();
-        } else if (id == R.id.nav_pengaturan) {
+        }/* else if (id == R.id.nav_pengaturan) {
             setTitle("Pengaturan");
             fragmentManager.beginTransaction().replace(R.id.content_frame, new Pengaturan()).commit();
-        } else if (id == R.id.nav_tetangga) {
+        } */else if (id == R.id.nav_tetangga) {
             setTitle("Tetangga Sekitar");
             fragmentManager.beginTransaction().replace(R.id.content_frame, new TetanggaSekitar()).commit();
         }else if(id == R.id.nav_event_warga){

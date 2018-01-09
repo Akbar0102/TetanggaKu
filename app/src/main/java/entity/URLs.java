@@ -15,4 +15,7 @@ public class URLs {
     public static final String URL_GETFORUM= ROOT_URL + "getForum";
     public static final String URL_GETSELECTEDFORUM= ROOT_URL + "getSelectedForum";
     public static final String URL_ADDFORUM = ROOT_URL + "addForum";
+    public static final String URL_GETPOIWILAYAH = ROOT_URL + "getPoiWilayah";
+    public static final String URL_GETPOIUSAHA = ROOT_URL + "getPoiUsaha";
+    public static final String URL_GETPOIENTER = ROOT_URL + "getPoiEnter";
 }

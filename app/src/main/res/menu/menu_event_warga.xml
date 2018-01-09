@@ -3,8 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/refresh_event"
+        android:icon="@drawable/ic_refresh_black_24dp"
+        android:title="Sync"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/tambah_event"
         android:icon="@android:drawable/ic_input_add"
-        android:title="Tamah Event"
+        android:title="Tambah Event"
         app:showAsAction="ifRoom" />
 </menu>
