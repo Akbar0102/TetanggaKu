@@ -78,7 +78,7 @@ public class TetanggaSekitar extends Fragment {
         list.setAdapter(adapter);
 
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(getActivity(), DetailTetangga.class);
@@ -88,7 +88,7 @@ public class TetanggaSekitar extends Fragment {
                 startActivity(i);
                 //Toast.makeText(getContext(),allWarga.get(position).getNama(),Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
         return myView;
     }
 

@@ -68,8 +68,10 @@ public class EventWarga extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(getActivity(), DetailTetangga.class);
                 i.putExtra(EXTRA_MESSAGE, allEvent.get(position).getNama());
-                i.putExtra("alamat", allEvent.get(position).getEvent());
-                i.putExtra("job", allEvent.get(position).getDeskripsi());
+                i.putExtra("event", allEvent.get(position).getEvent());
+                i.putExtra("deskripsi", allEvent.get(position).getDeskripsi());
+                i.putExtra("waktu", allEvent.get(position).getWaktu());
+                i.putExtra("lokasi", allEvent.get(position).getLokasi());
                 startActivity(i);
             }
         });
