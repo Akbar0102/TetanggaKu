@@ -21,7 +21,6 @@ import navdrawer.ForumWarga;
 import navdrawer.LokasiPenting;
 import navdrawer.Pengaturan;
 import navdrawer.TetanggaSekitar;
-import navdrawer.UrusIzin;
 
 
 public class MynavActivity extends AppCompatActivity
@@ -125,10 +124,11 @@ public class MynavActivity extends AppCompatActivity
         int id = item.getItemId();
         FragmentManager fragmentManager = getSupportFragmentManager();
 
-        if (id == R.id.nav_urus_izin) {
+        /*if (id == R.id.nav_urus_izin) {
             setTitle("Urus Izin");
             fragmentManager.beginTransaction().replace(R.id.content_frame, new UrusIzin()).commit();
-        } else if (id == R.id.nav_forum_warga) {
+        } else*/
+        if (id == R.id.nav_forum_warga) {
             setTitle("Forum Warga");
             fragmentManager.beginTransaction().replace(R.id.content_frame, new ForumWarga()).commit();
         } else if (id == R.id.nav_lokasi_penting) {

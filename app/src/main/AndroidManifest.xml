@@ -52,7 +52,8 @@
         <activity
             android:name="component.event_warga.TambahEvent"
             android:label="Tambah Event"
-            android:theme="@style/AppThemeDetail"/>
+            android:theme="@style/AppThemeDetail" />
+        <activity android:name="component.forum_warga.KomentarActivity"></activity>
     </application>
 
 </manifest>

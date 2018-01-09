@@ -12,4 +12,7 @@ public class URLs {
     public static final String URL_GETWARGA = ROOT_URL + "getWarga";
     public static final String URL_GETEVENT = ROOT_URL + "getEvent";
     public static final String URL_ADDEVENT = ROOT_URL + "addEvent";
+    public static final String URL_GETFORUM= ROOT_URL + "getForum";
+    public static final String URL_GETSELECTEDFORUM= ROOT_URL + "getSelectedForum";
+    public static final String URL_ADDFORUM = ROOT_URL + "addForum";
 }

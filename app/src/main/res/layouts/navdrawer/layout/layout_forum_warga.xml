@@ -10,10 +10,7 @@
         android:id="@+id/cardView"
         android:layout_width="0dp"
         android:layout_height="144dp"
-        android:layout_marginBottom="8dp"
         app:cardCornerRadius="5dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="15dp"
         app:contentPaddingLeft="10dp"
         app:contentPaddingRight="10dp"
         app:layout_constraintBottom_toTopOf="@+id/lv_feed"
@@ -23,10 +20,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
+            android:layout_width="348dp"
+            android:layout_height="144dp"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="82dp">
 
             <EditText
                 android:id="@+id/et_feed"
@@ -81,15 +80,12 @@
         </RelativeLayout>
 
 
-
     </android.support.v7.widget.CardView>
-
 
     <ListView
         android:id="@+id/lv_feed"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
